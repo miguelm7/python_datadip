@@ -13,6 +13,8 @@ services:
     #   DB_URL: sqlite:///data/reflex.db
     ports:
       - 8000:8000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  
     build:
       context: .
       dockerfile: Dockerfile
